@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after
+  box-sizing: border-box
+
+html
+  @include media('>=0px', '<600px')
+    font-size: 6px
+
+  @include media('>=600px', '<700px')
+    font-size: 6.8px
+
+  @include media('>=700px', '<800px')
+    font-size: 7.6px
+
+  @include media('>=800px', '<900px')
+    font-size: 8.4px
+
+  @include media('>=900px', '<1000px')
+    font-size: 9.2px
+
+  @include media('>=1000px')
+    font-size: 10px
+
+body
+  margin: 0
+  background-color: map-get($colors, background)
+  color: map-get($colors, text)
+  font-weight: 400
+  font-family: 'Myriad Pro', sans-serif
+  line-height: 1.2
+
+  @include media('>=0px', '<600px')
+    font-size: 14px
+
+  @include media('>=600px', '<800px')
+    font-size: 15px
+
+  @include media('>=800px')
+    font-size: 16px
+
+p
+  margin-top: 0
+
+table
+  border-collapse: collapse
+
+.visually-hidden
+  +visually-hidden

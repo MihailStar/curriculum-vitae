@@ -1,0 +1,9 @@
+mixin list(list)
+  ul.list
+    each item in list
+      li.list__item
+        .list__grid
+          h3.list__title= item.title
+          b.list__time= item.time
+        strong.list__place= item.place
+        p.list__description= item.description

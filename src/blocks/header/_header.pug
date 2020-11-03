@@ -1,0 +1,13 @@
+header.header
+  h1.header__title.title
+    span.title__first-name= person.firstName
+    span.title__last-name= person.lastName
+    span.title__skill= person.skill
+
+  img.header__photo(
+    srcset='./images/content/photo.jpg 1x, ./images/content/photo@2x.jpg 2x'
+    src='./images/content/photo.jpg'
+    alt=`${person.firstName} ${person.lastName} - ${person.skill}`
+    width='200'
+    height='200'
+  )

@@ -1,0 +1,34 @@
+$grid-column-padding: 35px
+$grid-column-left-width: 420px + $grid-column-padding * 2
+$grid-column-right-width: 630px + $grid-column-padding * 2
+$grid-width: $grid-column-left-width + $grid-column-right-width
+
+.grid
+  display: flex
+  justify-content: space-between
+  margin: 0 auto
+  padding: 7.6rem 0 3rem
+  min-width: 320px
+  max-width: $grid-width
+
+  @include media('>=0px', '<600px')
+    flex-direction: column
+
+  @include media('>=600px')
+    flex-direction: row
+
+  &__column
+    padding: 0 ($grid-column-padding / $grid-width * 100%)
+
+    &_left,
+    &_right
+      @include media('>=0px', '<600px')
+        width: 100%
+
+    &_left
+      @include media('>=600px')
+        width: $grid-column-left-width / $grid-width * 100%
+
+    &_right
+      @include media('>=600px')
+        width: $grid-column-right-width / $grid-width * 100%

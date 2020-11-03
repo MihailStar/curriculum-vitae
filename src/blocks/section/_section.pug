@@ -1,0 +1,8 @@
+block variables
+
+section.section(class=`section_${sectionModifier}` id=sectionModifier)
+  h2.section__header(class=`section__header_${sectionModifier}`)
+    span.section__icon
+      +icon(iconName, iconWidth, iconHeight)
+    span.section__title= sectionTitle
+  block section

@@ -1,0 +1,25 @@
+extends ./templates/_base.pug
+
+block variables
+  -
+    var person = {
+      firstName: 'Name Here',
+      lastName: 'Surname',
+      skill: 'Graphic Designer'
+    }
+  - var pageTitle = `${person.firstName} ${person.lastName} - ${person.skill}`
+
+block body
+  .grid
+    .grid__column.grid__column_left
+      include ./blocks/header/_header.pug
+      include ./blocks/profile/_profile.pug
+      include ./blocks/contacts/_contacts.pug
+      include ./blocks/skills/_skills.pug
+
+    .grid__column.grid__column_right
+      include ./blocks/education/_education.pug
+      include ./blocks/experience/_experience.pug
+      include ./blocks/software/_software.pug
+
+  include ./blocks/sprite/_sprite.pug

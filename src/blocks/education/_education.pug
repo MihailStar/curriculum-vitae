@@ -1,0 +1,40 @@
+extends ../section/_section.pug
+include ../list/_list.pug
+
+block variables
+  - var sectionTitle = 'Education'
+  - var sectionModifier = 'education'
+  - var iconName = sectionModifier
+  - var iconWidth = '44'
+  - var iconHeight = '44'
+
+block section
+  -
+    var data = [
+      {
+        title: 'Master Degree',
+        place: 'University Name',
+        time: 'Feb 2011 - Jun 2014',
+        description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.'
+      },
+      {
+        title: 'Master Degree',
+        place: 'University Name',
+        time: 'Feb 2011 - Jun 2014',
+        description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.'
+      },
+      {
+        title: 'Master Degree',
+        place: 'University Name',
+        time: 'Feb 2011 - Jun 2014',
+        description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.'
+      },
+      {
+        title: 'Master Degree',
+        place: 'University Name',
+        time: 'Feb 2011 - Jun 2014',
+        description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.'
+      }
+    ]
+
+  +list(data)

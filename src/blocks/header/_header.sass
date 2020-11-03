@@ -1,0 +1,39 @@
+.header
+  display: flex
+  flex-direction: column
+  margin-bottom: 7.8rem
+
+  &__title
+    order: 2
+
+  &__photo
+    order: 1
+    margin: 1.4rem auto 3rem
+    border: 1.4rem solid map-get($colors, background)
+    border-radius: 50%
+    box-shadow: 0 0 0 1px map-get($colors, main)
+    +size(22.8rem)
+
+.title
+  margin-top: 0
+  margin-bottom: 0
+
+  &__first-name,
+  &__last-name,
+  &__skill
+    display: block
+    text-align: center
+    text-transform: uppercase
+    font-weight: 700
+    +hyphens
+
+  &__first-name
+    margin-bottom: -1.8rem
+    font-weight: 300
+    font-size: 5.2rem
+
+  &__last-name
+    font-size: 6.2rem
+
+  &__skill
+    font-size: 2.4rem

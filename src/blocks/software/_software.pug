@@ -1,0 +1,49 @@
+extends ../section/_section.pug
+
+block variables
+  - var sectionTitle = 'Software'
+  - var sectionModifier = 'software'
+  - var iconName = sectionModifier
+  - var iconWidth = '44'
+  - var iconHeight = '44'
+
+block section
+  -
+    var data = [
+      {
+        title: 'Photoshop',
+        rating: '11'
+      },
+      {
+        title: 'Dreamweaver',
+        rating: '10'
+      },
+      {
+        title: 'Illustrator',
+        rating: '8.5'
+      },
+      {
+        title: 'After Effects',
+        rating: '7.5'
+      },
+      {
+        title: 'Indesign',
+        rating: '7'
+      },
+      {
+        title: 'HTML & CSS',
+        rating: '11'
+      }
+    ]
+
+  mixin software(item)
+    - var maximumRating = 12
+    li.software__item
+      h3.software__title= item.title
+      b.software__description= `${item.rating} out of ${maximumRating}`
+      .software__scale
+        .software__scale-inner(style=`width: ${100 / maximumRating * item.rating}%`)
+
+  ul.software.js-software
+    each item in data
+      +software(item)

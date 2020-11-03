@@ -1,0 +1,47 @@
+.software
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  margin-top: 0
+  margin-bottom: 0
+  padding-left: 0
+
+  &__item
+    display: block
+    width: 44%
+
+    &:not(:last-child)
+      margin-bottom: 2.2rem
+
+  &__title
+    margin-top: 0
+    margin-bottom: 1.2rem
+    text-transform: uppercase
+    font-weight: 400
+    font-size: 2.6rem
+    +hyphens
+
+  &__description
+    +visually-hidden
+
+  &__scale
+    overflow: hidden
+    height: 2.2rem
+    background-color: map-get($colors, scale)
+
+  &__scale-inner
+    height: 100%
+    background-color: map-get($colors, main)
+    transform: translateX(-100%)
+
+  .no-js &__scale-inner
+    transform: translateX(0%)
+
+  .in-view &__scale-inner
+    animation: software 2400ms linear forwards
+
+@keyframes software
+  from
+    transform: translateX(-100%)
+  to
+    transform: translateX(0%)

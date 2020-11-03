@@ -1,0 +1,34 @@
+extends ../section/_section.pug
+include ../list/_list.pug
+
+block variables
+  - var sectionTitle = 'Experience'
+  - var sectionModifier = 'experience'
+  - var iconName = sectionModifier
+  - var iconWidth = '38'
+  - var iconHeight = '38'
+
+block section
+  -
+    var data = [
+      {
+        title: 'Company Name',
+        place: 'Your Job Here',
+        time: 'Feb 2011 - Jun 2014',
+        description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.'
+      },
+      {
+        title: 'Company Name',
+        place: 'Your Job Here',
+        time: 'Feb 2011 - Jun 2014',
+        description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.'
+      },
+      {
+        title: 'Company Name',
+        place: 'Your Job Here',
+        time: 'Feb 2011 - Jun 2014',
+        description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque.'
+      }
+    ]
+
+  +list(data)

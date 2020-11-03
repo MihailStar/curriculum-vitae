@@ -1,0 +1,32 @@
+.contacts
+  &__title,
+  &__description
+    padding: 1.4rem 0 1.5rem
+
+    @include media('>=0px', '<800px')
+      font-size: inherit
+
+    @include media('>=800px')
+      font-size: 2rem
+
+  &__title
+    color: map-get($colors, main)
+    text-transform: uppercase
+    font-weight: 700
+
+    @include media('>=0px', '<800px')
+      padding-right: 2rem
+
+    @include media('>=800px')
+      padding-right: 4.2rem
+
+  &__link
+    border-bottom: 1px solid transparent
+    color: inherit
+    text-decoration: none
+    transition: border-bottom-color 200ms
+
+    &:hover,
+    &:focus
+      outline: none
+      border-bottom-color: currentColor

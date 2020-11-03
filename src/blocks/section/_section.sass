@@ -1,0 +1,79 @@
+.section
+  margin-bottom: 4rem
+
+  &_contacts
+    margin-bottom: 3.4rem
+
+  &_education,
+  &_experience
+    margin-bottom: 5rem
+
+  &__header
+    display: flex
+    align-items: center
+    margin-top: 0
+    margin-bottom: 2rem
+
+    &::after
+      flex-grow: 1
+      margin-left: 2rem
+      height: .5rem
+      background-color: map-get($colors, main)
+      content: ''
+
+    &_profile
+      margin-bottom: 1rem
+
+    &_contacts,
+    &_skills
+      margin-bottom: 2.2rem
+
+    &_education,
+    &_software
+      margin-bottom: 2.6rem
+
+    &_experience
+      margin-bottom: 4rem
+
+  &__icon
+    display: flex
+    flex-shrink: 0
+    margin-right: 2rem
+    border: .3rem solid map-get($colors, background)
+    border-radius: 50%
+    background-color: map-get($colors, icon)
+    box-shadow: 0 0 0 1px map-get($colors, main)
+    +size(7.2rem)
+
+  &__title
+    margin-bottom: -4px
+    // max-width для +hyphens
+    max-width: 80%
+    color: map-get($colors, main)
+    text-transform: uppercase
+    font-weight: 700
+    font-size: 4.2rem
+    +hyphens
+
+.icon-profile,
+.icon-contacts,
+.icon-skills,
+.icon-education,
+.icon-experience,
+.icon-software
+  margin: auto
+  fill: map-get($colors, background)
+
+.icon-profile
+  +size(3.2rem)
+
+.icon-contacts,
+.icon-experience
+  +size(3.8rem)
+
+.icon-skills
+  +size(4.0rem)
+
+.icon-education,
+.icon-software
+  +size(4.4rem)

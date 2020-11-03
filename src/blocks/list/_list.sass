@@ -1,0 +1,50 @@
+.list
+  margin-top: 0
+  margin-bottom: 0
+  padding-left: 5rem
+
+  &__item
+    display: block
+
+    &:not(:last-child)
+      margin-bottom: 1rem
+
+  &__grid
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: .2rem
+
+  &__title
+    position: relative
+    margin: 0 1.4rem 0 0
+    color: map-get($colors, main)
+    text-transform: uppercase
+    font-weight: 700
+    font-size: 2.6rem
+
+    &::before
+      position: absolute
+      top: .5rem
+      left: -4rem
+      border-radius: 50%
+      background-color: map-get($colors, text)
+      content: ''
+      +size(2rem)
+
+  &__time
+    font-weight: 400
+    font-size: 2.6rem
+
+    &::before
+      margin-right: .4rem
+      content: '//'
+
+  &__place
+    display: block
+    margin-bottom: .6rem
+    text-transform: uppercase
+    font-weight: 400
+    font-size: 2.6rem
+
+  &__description
+    margin-bottom: 1rem

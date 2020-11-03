@@ -1,0 +1,45 @@
+extends ../section/_section.pug
+
+block variables
+  - var sectionTitle = 'Skills'
+  - var sectionModifier = 'skills'
+  - var iconName = sectionModifier
+  - var iconWidth = '40'
+  - var iconHeight = '40'
+
+block section
+  -
+    var data = [
+      {
+        title: 'Creative',
+        rating: '9'
+      },
+      {
+        title: 'Teamwork',
+        rating: '11'
+      },
+      {
+        title: 'Innovate',
+        rating: '6'
+      },
+      {
+        title: 'Communication',
+        rating: '11'
+      }
+    ]
+
+  mixin skill(item)
+    - var maximumRating = 12
+    li.skills__item
+      h3.skills__title= item.title
+      b.skills__description= `${item.rating} out of ${maximumRating}`
+      .skills__scale
+        - for (var i = 1; i <= maximumRating; i++)
+          - if (i <= item.rating)
+            .skills__scale-item.skills__scale-item_active
+          - else
+            .skills__scale-item
+
+  ul.skills.js-skills
+    each item in data
+      +skill(item)

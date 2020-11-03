@@ -1,0 +1,55 @@
+extends ../section/_section.pug
+
+block variables
+  - var sectionTitle = 'Contacts'
+  - var sectionModifier = 'contacts'
+  - var iconName = sectionModifier
+  - var iconWidth = '38'
+  - var iconHeight = '38'
+
+block section
+  -
+    var data = [
+      {
+        title: 'Address',
+        attributes: {
+          href: 'https://www.google.ru/maps',
+          target: '_blank',
+          rel: 'noopener'
+        },
+        description: 'Main Street, City'
+      },
+      {
+        title: 'E-mail',
+        attributes: {
+          href: 'mailto:contact@domain.com'
+        },
+        description: 'contact@domain.com'
+      },
+      {
+        title: 'Phone',
+        attributes: {
+          href: 'tel:+7555555555'
+        },
+        description: '555-555-555'
+      },
+      {
+        title: 'Website',
+        attributes: {
+          href: 'https://www.yourweb.com',
+          target: '_blank',
+          rel: 'noopener'
+        },
+        description: 'www.yourweb.com'
+      }
+    ]
+
+  mixin contact(item)
+    tr
+      td.contacts__title= item.title
+      td.contacts__description
+        a.contacts__link&attributes(item.attributes)= item.description
+
+  table.contacts
+    each item in data
+      +contact(item)
